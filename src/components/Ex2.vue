@@ -13,5 +13,7 @@
 <template>
 
     <!-- add code here -->
-   
+    <img v-bind:src="myImg" v-bind:width="width" v-bind:height="height"></img>
+    <!--we can also remove the v-bind and use only ":" which is a shorthand notation-->
+    <!--<img :src="myImg" :width="width" :height="height"></img>-->
 </template>
