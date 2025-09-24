@@ -3,10 +3,16 @@
         data() {
             return {
                 // Add code here
+                id:"demo 1",
+                isActive: true
             }
         },
         methods: { 
    			// Add code here
+            changeColor()
+            {
+                this.isActive= !this.isActive
+            }
 		}
     }
 </script>
@@ -15,11 +21,11 @@
     
     <!-- Modify code here -->
     <div class="container">
-        <div v-bind:id="id" class="m-2">
+        <div v-bind:id="id" class="m-2" v-bind:class="{'blueBox': isActive, 'redBox': !isActive}">
             div ID : {{id}} 
         </div>
         
-        <button type="button">Change Color</button>
+        <button type="button" v-bind:class="{'btn btn-primary': isActive, 'btn btn-danger': !isActive}" @click="changeColor()">Change Color</button>
     </div>
 
 </template>
